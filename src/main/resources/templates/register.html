@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER PAGE</title>
+</head>
+<body>
+
+<table>
+  <tr>
+      <td> <a href="/gocorona/"> HOME </a> </td>
+      <td> <a href="/gocorona/getlog/"> LOGIN </a> </td>
+      <td> <a href="/gocorona/getreg/"> REGISTER </a> </td>
+      <td> <a href="/gocorona/getdel/"> DELETE </a> </td>
+      <td> <a href="/gocorona/doshow/"> SHOW </a> </td>
+  </tr>
+</table>
+
+<h1> THIS IS REGISTER PAGE </h1>
+
+<form name="f1" method="post" action="/gocorona/doregister">
+    Email : <input type="email" name="email"> <br><br>
+    Password : <input type="password" name="pass"> <br><br>
+    Name : <input type="text" name="name"> <br><br>
+    Age : <input type="text" name="age"> <br><br>
+    Phone : <input type="text" name="phone"> <br><br>
+
+    <input type="submit" name="sub" value="Register"> &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="reset" name="res" value="Cancel">
+</form>
+
+
+
+</body>
+</html>

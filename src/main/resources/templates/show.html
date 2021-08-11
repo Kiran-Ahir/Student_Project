@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Users</title>
+
+  <table>
+    <tr>
+      <td> <a href="/gocorona/"> HOME </a> </td>
+      <td> <a href="/gocorona/getlog/"> LOGIN </a> </td>
+      <td> <a href="/gocorona/getreg/"> REGISTER </a> </td>
+      <td> <a href="/gocorona/getdel/"> DELETE </a> </td>
+      <td> <a href="/gocorona/doshow/"> SHOW </a> </td>
+    </tr>
+  </table>
+
+</head>
+<body>
+
+  <table width="50%" height="50%" cellspacing="10" cellpadding="10">
+    <tr><th> ID </th> <th> NAME </th> <th> AGE </th> <th> EMAIL </th> <th> PASSWORD </th> <th> PHONE </th></tr>
+
+    <!-- thymeleaf is used to show dynamic data from database in pure html file and also used to locate required any file (It is search engine) -->
+    <tr style="font-size:20pt;" th:each="u : ${userlist}">
+      <td th:text="${u.uid}"> </td>
+      <td th:text="${u.sname}"> </td>
+      <td th:text="${u.age}"> </td>
+      <td th:text="${u.email}"> </td>
+      <td th:text="${u.password}"> </td>
+      <td th:text="${u.phone}"> </td>
+    </tr>
+  </table>
+
+</body>
+</html>
